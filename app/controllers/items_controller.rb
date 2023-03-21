@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
       user=User.find(params[:user_id])
       items=user.items
     else
-     items=Items.all
+     items=Item.all
     end
     render json: items, include: :user
   end
